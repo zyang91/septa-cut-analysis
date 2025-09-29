@@ -12,7 +12,7 @@ restore<- read_gtfs("data/restore.zip")
 gt <- cut
 the_date <- as.Date("2025-09-29")  # set the typical day
 
-active_ids <- gt$.$dates_services %>%       
+active_ids <- gt$.$dates_services %>%
   filter(date == the_date) %>%
   distinct(service_id) %>%
   pull(service_id)
@@ -25,15 +25,15 @@ hours_freq_peak <- gt %>%
   )
 
 nrow(hours_freq); length(unique(gt$routes$route_id))
-setdiff(gt$routes$route_id, hours_freq_peak$route_id)  
+setdiff(gt$routes$route_id, hours_freq_peak$route_id)
 # Return headway in seconds.
 
 # rename all the columns to have a _cut suffix
 hours_freq_cut <- hours_freq_peak %>%
   rename_with(~ paste0(., "_cut"), -route_id)
 
-## Restore service analysis 
-active_ids <- restore$.$dates_services %>%       
+## Restore service analysis
+active_ids <- restore$.$dates_services %>%
   filter(date == the_date) %>%
   distinct(service_id) %>%
   pull(service_id)
@@ -46,7 +46,7 @@ peak_freq_restore <- restore %>%
   )
 
 nrow(hours_freq_restore); length(unique(restore$routes$route_id))
-setdiff(restore$routes$route_id, hours_freq_restore$route_id)  
+setdiff(restore$routes$route_id, hours_freq_restore$route_id)
 
 # rename all the columns to have a _restore suffix
 hours_freq_restore <- peak_freq_restore %>%
