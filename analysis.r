@@ -24,7 +24,7 @@ hours_freq_peak <- gt %>%
     service_ids = active_ids
   )
 
-nrow(hours_freq); length(unique(gt$routes$route_id))
+nrow(hours_freq_peak); length(unique(gt$routes$route_id))
 setdiff(gt$routes$route_id, hours_freq_peak$route_id)
 # Return headway in seconds.
 
@@ -45,7 +45,7 @@ peak_freq_restore <- restore %>%
     service_ids = active_ids
   )
 
-nrow(hours_freq_restore); length(unique(restore$routes$route_id))
+nrow(peak_freq_restore); length(unique(restore$routes$route_id))
 setdiff(restore$routes$route_id, hours_freq_restore$route_id)
 
 # rename all the columns to have a _restore suffix
@@ -72,18 +72,18 @@ freq_comparison <- freq_comparison %>%
   )
 
 ggplot(freq_comparison, aes(x = headway_diff)) +
-  geom_histogram(binwidth = 400, fill = "blue", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 600, fill = "blue", color = "black", alpha = 0.7) +
   labs(
-    title = "Distribution of Headway Differences (Restore - Cut)",
+    title = "Distribution of Peak Hours Headway Differences (Restore - Cut)",
     x = "Headway Difference (seconds)",
     y = "Frequency"
   ) +
   theme_minimal()
 
 ggplot(freq_comparison, aes(x = trips_diff)) +
-  geom_histogram(binwidth = 1, fill = "green", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 100, fill = "green", color = "black", alpha = 0.7) +
   labs(
-    title = "Distribution of Trips Differences (Restore - Cut)",
+    title = "Distribution of Peak Hours Trips Differences (Restore - Cut)",
     x = "Trips Difference",
     y = "Frequency"
   ) +
@@ -131,7 +131,7 @@ midday_freq_comparison <- midday_freq_comparison %>%
     trips_diff   = total_departures_restore - total_departures_cut
   )
 ggplot(midday_freq_comparison, aes(x = headway_diff)) +
-  geom_histogram(binwidth = 400, fill = "blue", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 600, fill = "blue", color = "black", alpha = 0.7) +
   labs(
     title = "Distribution of Midday Headway Differences (Restore - Cut)",
     x = "Headway Difference (seconds)",
@@ -139,7 +139,7 @@ ggplot(midday_freq_comparison, aes(x = headway_diff)) +
   ) +
   theme_minimal()
 ggplot(midday_freq_comparison, aes(x = trips_diff)) +
-  geom_histogram(binwidth = 70, fill = "green", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 100, fill = "green", color = "black", alpha = 0.7) +
   labs(
     title = "Distribution of Midday Trips Differences (Restore - Cut)",
     x = "Trips Difference",
