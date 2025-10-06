@@ -19,8 +19,8 @@ active_ids <- gt$.$dates_services %>%
 
 hours_freq_peak <- gt %>%
   get_route_frequency(
-    start_time  = "06:00:00",
-    end_time    = "10:00:00",
+    start_time  = "07:30:00",
+    end_time    = "09:30:00",
     service_ids = active_ids
   )
 
@@ -40,13 +40,13 @@ active_ids <- restore$.$dates_services %>%
 
 peak_freq_restore <- restore %>%
   get_route_frequency(
-    start_time  = "06:00:00",
-    end_time    = "10:00:00",
+    start_time  = "07:30:00",
+    end_time    = "09:30:00",
     service_ids = active_ids
   )
 
 nrow(peak_freq_restore); length(unique(restore$routes$route_id))
-setdiff(restore$routes$route_id, hours_freq_restore$route_id)
+setdiff(restore$routes$route_id, peak_freq_restore$route_id)
 
 # rename all the columns to have a _restore suffix
 hours_freq_restore <- peak_freq_restore %>%
@@ -67,27 +67,18 @@ freq_comparison <- freq_comparison %>%
       -median_headways_restore,
       median_headways_restore
     ),
-    headway_diff = median_headways_restore - median_headways_cut,
-    trips_diff   = total_departures_restore - total_departures_cut
+    headway_diff = (median_headways_restore - median_headways_cut)/60
   )
 
 ggplot(freq_comparison, aes(x = headway_diff)) +
-  geom_histogram(binwidth = 600, fill = "blue", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 10, fill = "blue", color = "black", alpha = 0.7) +
   labs(
     title = "Distribution of Peak Hours Headway Differences (Restore - Cut)",
-    x = "Headway Difference (seconds)",
+    x = "Headway Difference (minutes)",
     y = "Frequency"
   ) +
   theme_minimal()
 
-ggplot(freq_comparison, aes(x = trips_diff)) +
-  geom_histogram(binwidth = 100, fill = "green", color = "black", alpha = 0.7) +
-  labs(
-    title = "Distribution of Peak Hours Trips Differences (Restore - Cut)",
-    x = "Trips Difference",
-    y = "Frequency"
-  ) +
-  theme_minimal()
 
 
 ### miday analysis
@@ -127,22 +118,112 @@ midday_freq_comparison <- midday_freq_comparison %>%
       -median_headways_restore,
       median_headways_restore
     ),
-    headway_diff = median_headways_restore - median_headways_cut,
-    trips_diff   = total_departures_restore - total_departures_cut
+    headway_diff = (median_headways_restore - median_headways_cut)/60,
   )
 ggplot(midday_freq_comparison, aes(x = headway_diff)) +
-  geom_histogram(binwidth = 600, fill = "blue", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 10, fill = "blue", color = "black", alpha = 0.7) +
   labs(
     title = "Distribution of Midday Headway Differences (Restore - Cut)",
-    x = "Headway Difference (seconds)",
+    x = "Headway Difference (minutes)",
     y = "Frequency"
   ) +
   theme_minimal()
-ggplot(midday_freq_comparison, aes(x = trips_diff)) +
-  geom_histogram(binwidth = 100, fill = "green", color = "black", alpha = 0.7) +
+
+
+### Trip count comparison during peak hours
+
+library(hms)
+
+# inputs you already have from get_route_frequency()
+start_time <- "07:30:00"
+end_time   <- "09:30:00"
+
+
+# assume `gtfs` is your tidytransit GTFS object
+cuts <- cut$stop_times %>%
+  mutate(dep = hms::as_hms(departure_time)) %>%
+  filter(dep >= hms::as_hms(start_time), dep < hms::as_hms(end_time)) %>%
+  inner_join(cut$trips,  by = "trip_id") %>%
+  filter(service_id %in% active_ids) %>%
+  inner_join(cut$routes, by = "route_id")
+
+# count trips by route and direction
+trips_by_route_dir <- cuts %>%
+  distinct(route_id, direction_id, trip_id) %>%
+  count(route_id, direction_id, name = "n_trips")
+
+restore_trips <- restore$stop_times %>%
+  mutate(dep = hms::as_hms(departure_time)) %>%
+  filter(dep >= hms::as_hms(start_time), dep < hms::as_hms(end_time)) %>%
+  inner_join(restore$trips,  by = "trip_id") %>%
+  filter(service_id %in% active_ids) %>%
+  inner_join(restore$routes, by = "route_id")
+
+# count trips by route and direction
+restore_trips_by_route_dir <- restore_trips %>%
+  distinct(route_id, direction_id, trip_id) %>%
+  count(route_id, direction_id, name = "n_trips")
+
+# join the two datasets
+trips_comparison <- trips_by_route_dir %>%
+  full_join(restore_trips_by_route_dir, by = c("route_id", "direction_id"), suffix = c("_cut", "_restore"))
+# replace NAs with 0
+trips_comparison[is.na(trips_comparison)] <- 0
+
+trips_comparison <- trips_comparison %>%
+  mutate(trips_diff = n_trips_restore - n_trips_cut)
+
+## nonpeak
+start_time <- "11:00:00"
+end_time   <- "14:00:00"
+
+cuts_non_peak <- cut$stop_times %>%
+  mutate(dep = hms::as_hms(departure_time)) %>%
+  filter(dep >= hms::as_hms(start_time), dep < hms::as_hms(end_time)) %>%
+  inner_join(cut$trips,  by = "trip_id") %>%
+  filter(service_id %in% active_ids) %>%
+  inner_join(cut$routes, by = "route_id")
+
+# count trips by route and direction
+trips_by_route_dir_non_peak <- cuts_non_peak %>%
+  distinct(route_id, direction_id, trip_id) %>%
+  count(route_id, direction_id, name = "n_trips")
+
+restore_trips_non_peak <- restore$stop_times %>%
+  mutate(dep = hms::as_hms(departure_time)) %>%
+  filter(dep >= hms::as_hms(start_time), dep < hms::as_hms(end_time)) %>%
+  inner_join(restore$trips,  by = "trip_id") %>%
+  filter(service_id %in% active_ids) %>%
+  inner_join(restore$routes, by = "route_id")
+
+# count trips by route and direction
+restore_trips_by_route_dir_non_peak <- restore_trips_non_peak %>%
+  distinct(route_id, direction_id, trip_id) %>%
+  count(route_id, direction_id, name = "n_trips")
+# join the two datasets
+trips_comparison_non_peak <- trips_by_route_dir_non_peak %>%
+  full_join(restore_trips_by_route_dir_non_peak, by = c("route_id", "direction_id"), suffix = c("_cut", "_restore"))
+# replace NAs with 0
+trips_comparison_non_peak[is.na(trips_comparison_non_peak)] <- 0
+trips_comparison_non_peak <- trips_comparison_non_peak %>%
+  mutate(trips_diff = n_trips_restore - n_trips_cut)
+
+ggplot(trips_comparison, aes(x = trips_diff)) +
+  geom_histogram(binwidth = 1, fill = "blue", color = "black", alpha = 0.7) +
   labs(
-    title = "Distribution of Midday Trips Differences (Restore - Cut)",
-    x = "Trips Difference",
+    title = "Distribution of Peak Hours Trip Count Differences (Restore - Cut)",
+    x = "Trip Count Difference",
     y = "Frequency"
   ) +
   theme_minimal()
+ggplot(trips_comparison_non_peak, aes(x = trips_diff)) +
+  geom_histogram(binwidth = 1, fill = "blue", color = "black", alpha = 0.7) +
+  labs(
+    title = "Distribution of Non-Peak Hours Trip Count Differences (Restore - Cut)",
+    x = "Trip Count Difference",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+
+
+
