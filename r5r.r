@@ -75,13 +75,13 @@ ensure_osm_pbf(osm_pbf)
 # message("Downloading TIGER/Line tracts for 5-County SE PA…")
 
 # pa_state <- "PA"
-# pa_counties <- c("Philadelphia", "Delaware", "Montgomery", "Bucks", "Chester") 
+# pa_counties <- c("Philadelphia", "Delaware", "Montgomery", "Bucks", "Chester")
 # tracts <- tracts(state = pa_state, county = pa_counties, year = 2023, cb = TRUE, class = "sf") |>
 #   st_transform(4326)
-# 
+#
 # # Keep only GEOID + geometry for simplicity
 # tracts <- tracts %>% select(GEOID, NAME, ALAND, AWATER, geometry)
-# 
+#
 # # Create interior point centroids for reliable inside points
 # tract_centroids <- st_point_on_surface(tracts) %>%
 #   mutate(from_id = GEOID) %>%
@@ -109,7 +109,7 @@ departure_time <- ymd_hms("2025-10-16 07:30:00")
 #   sf::st_as_sf(coords = c("stop_lon","stop_lat"), crs = 4326, remove = FALSE) %>%
 #   sf::st_transform(3857)
 # service_area <- stops_before %>% st_buffer(service_buffer_m) %>% st_union() %>% st_make_valid() %>% st_transform(4326)
-# 
+#
 # tracts_served <- tracts %>% st_filter(service_area)  # only tracts intersecting service area
 
 # Update centroids/origins for routing to limit computations
@@ -132,22 +132,34 @@ max_trip_duration <- 180   # minutes; cap long searches
 num_itineraries   <- 3     # sample multiple itineraries
 walk_speed        <- 1.3   # m/s ~ 10.8 km/h if you want 1.3 m/s typical, change
 
-build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, departure_time,
-                               modes, max_walk_dist, max_trip_duration, num_itineraries, walk_speed){
+# ---------------------------
+# Helper functions (broken up for memory efficiency)
+# ---------------------------
+
+# Function 1: Setup R5 core and build network
+setup_r5_core <- function(osm_pbf, gtfs_zip) {
   message("Building R5 core: ", gtfs_zip)
   r5r_core <- setup_r5(data_path = dirname(gtfs_zip),
                        temp_dir = TRUE,
-                       verbose = FALSE,
-                       # Build network with these inputs explicitly
-                       # When data_path contains multiple GTFS/OSM, r5r tries to pick up; use the function below to enforce
-  )
-  
+                       verbose = FALSE)
+
   # Force network build from specific files (ensures only desired GTFS used)
   r5r::build_network(r5r_core, elevation = FALSE, quiet = TRUE,
                      overwrite = TRUE,
                      routing_files = list(osm = osm_pbf, transit = gtfs_zip))
-  
+
+  return(r5r_core)
+}
+
+# Function 2: Compute travel time matrix (with reduced memory parameters)
+compute_travel_time_matrix <- function(r5r_core, origins_df, destinations_df, departure_time,
+                                       modes, max_walk_dist, max_trip_duration, walk_speed) {
   message("Routing…")
+
+  # Reduced memory parameters: fewer threads, smaller time window, fewer draws
+  n_cores <- parallel::detectCores()
+  n_threads <- max(1, min(2, n_cores - 1))  # Use at most 2 threads to reduce memory
+
   ttm <- travel_time_matrix(
     r5r_core,
     origins      = origins_df,
@@ -156,7 +168,7 @@ build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, d
     departure_datetime = departure_time,
     max_walk_dist = max_walk_dist,
     max_trip_duration = max_trip_duration,
-    n_threads = max(1, parallel::detectCores() - 1),
+    n_threads = n_threads,  # Reduced threads
     walk_speed = walk_speed,
     number_of_breaks = 0,
     shortest_path = FALSE,
@@ -165,26 +177,56 @@ build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, d
     max_lts = 2,
     fare_cutoff = Inf,
     percentiles = 50,          # median travel time
-    draws_per_minute = 5,
-    time_window = 60,          # explore departures within 60-min window
+    draws_per_minute = 3,      # Reduced from 5 to 3 for memory
+    time_window = 30,          # Reduced from 60 to 30 minutes for memory
     drop_geometry = TRUE,
     keep = c("access_time", "waiting_time", "in_vehicle_time", "transfer_time")
   )
-  
+
+  return(ttm)
+}
+
+# Function 3: Cleanup R5 core and free memory
+cleanup_r5_core <- function(r5r_core) {
+  message("Cleaning up R5 core…")
   stop_r5(r5r_core)
-  ttm
+  gc()  # Force garbage collection to free memory
+}
+
+# Main function: Orchestrates the workflow
+build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, departure_time,
+                               modes, max_walk_dist, max_trip_duration, num_itineraries, walk_speed){
+  # Step 1: Setup R5 core
+  r5r_core <- setup_r5_core(osm_pbf, gtfs_zip)
+  gc()  # Clean up after network build
+
+  # Step 2: Compute travel time matrix
+  ttm <- compute_travel_time_matrix(r5r_core, origins_df, destinations_df, departure_time,
+                                    modes, max_walk_dist, max_trip_duration, walk_speed)
+
+  # Step 3: Cleanup
+  cleanup_r5_core(r5r_core)
+
+  return(ttm)
 }
 
 
 
 
 # BEFORE
+message("Computing travel times for BEFORE scenario…")
 ttm_before <- build_core_and_ttm(
   osm_pbf, gtfs_before, origins_served, destinations, departure_time,
   modes, max_walk_dist, max_trip_duration, num_itineraries, walk_speed
 )
 
+# Force garbage collection between runs to free memory
+message("Freeing memory before next computation…")
+gc()
+Sys.sleep(2)  # Brief pause to let system fully release resources
+
 # AFTER
+message("Computing travel times for AFTER scenario…")
 ttm_after <- build_core_and_ttm(
   osm_pbf, gtfs_after, origins_served, destinations, departure_time,
   modes, max_walk_dist, max_trip_duration, num_itineraries, walk_speed
