@@ -12,47 +12,45 @@ options(tigris_use_cache = TRUE)
 # Increase Java memory for routing (adjust as needed)
 options(java.parameters = "-Xmx16G")
 
-# ---------------------------
-# 1) User Inputs (EDIT THESE)
-# ---------------------------
 
-# Paths (kept SIMPLE — use your uploaded files)
-data_dir    <- "data"                 # where your cut.zip and restore.zip live
-osm_pbf     <- file.path(data_dir, "pennsylvania-latest.osm.pbf")
-# GTFS (simple, direct paths)
-gtfs_before <- file.path(data_dir, "restore.zip")  # baseline
-gtfs_after  <- file.path(data_dir, "cut.zip")      # post-cuts
-outputs_dir <- file.path(data_dir, "outputs")
-if (!dir.exists(outputs_dir)) dir.create(outputs_dir, recursive = TRUE)
 
-# Auto-download OSM once if missing (simple download)
-if (!file.exists(osm_pbf)) {
-  message("Downloading Pennsylvania OSM extract (once)…")
-  dir.create(dirname(osm_pbf), showWarnings = FALSE, recursive = TRUE)
-  download.file(
-    url      = "https://download.geofabrik.de/north-america/us/pennsylvania-latest.osm.pbf",
-    destfile = osm_pbf,
-    mode     = "wb",
-    quiet    = TRUE
-  )
-}
-
-# Buffer distance around stops to define service area for filtering tracts
-service_buffer_m <- 2000
-
-# Auto-download OSM PBF if not present
-ensure_osm_pbf <- function(path){
-  if (!file.exists(path)){
-    message("Downloading Mid-Atlantic OSM PBF from Geofabrik…")
-    url <- "https://download.geofabrik.de/north-america/us/mid-atlantic-latest.osm.pbf"
-    utils::download.file(url, destfile = path, mode = "wb", quiet = FALSE)
-    message("Saved OSM to ", path)
-  } else {
-    message("Using existing OSM: ", path)
-  }
-  invisible(path)
-}
-ensure_osm_pbf(osm_pbf)
+# # Paths (kept SIMPLE — use your uploaded files)
+# data_dir    <- "data"                 # where your cut.zip and restore.zip live
+# osm_pbf     <- file.path(data_dir, "pennsylvania-latest.osm.pbf")
+# # GTFS (simple, direct paths)
+# gtfs_before <- file.path(data_dir, "restore.zip")  # baseline
+# gtfs_after  <- file.path(data_dir, "cut.zip")      # post-cuts
+# outputs_dir <- file.path(data_dir, "outputs")
+# if (!dir.exists(outputs_dir)) dir.create(outputs_dir, recursive = TRUE)
+# 
+# # Auto-download OSM once if missing (simple download)
+# if (!file.exists(osm_pbf)) {
+#   message("Downloading Pennsylvania OSM extract (once)…")
+#   dir.create(dirname(osm_pbf), showWarnings = FALSE, recursive = TRUE)
+#   download.file(
+#     url      = "https://download.geofabrik.de/north-america/us/pennsylvania-latest.osm.pbf",
+#     destfile = osm_pbf,
+#     mode     = "wb",
+#     quiet    = TRUE
+#   )
+# }
+# 
+# # Buffer distance around stops to define service area for filtering tracts
+# service_buffer_m <- 2000
+# 
+# # Auto-download OSM PBF if not present
+# ensure_osm_pbf <- function(path){
+#   if (!file.exists(path)){
+#     message("Downloading Mid-Atlantic OSM PBF from Geofabrik…")
+#     url <- "https://download.geofabrik.de/north-america/us/mid-atlantic-latest.osm.pbf"
+#     utils::download.file(url, destfile = path, mode = "wb", quiet = FALSE)
+#     message("Saved OSM to ", path)
+#   } else {
+#     message("Using existing OSM: ", path)
+#   }
+#   invisible(path)
+# }
+# ensure_osm_pbf(osm_pbf)
 
 # ---------------------------
 # 2) Download / Load Census Tracts (sf)
@@ -124,7 +122,7 @@ walk_speed        <- 1.3   # m/s ~ 10.8 km/h if you want 1.3 m/s typical, change
 
 #Function 1: Setup R5 core and build network
 setup_r5_core <-build_network(
-    data_path = "data/data_path_after",
+    data_path = "data/cut_network_build",
     verbose = FALSE,
     temp_dir = TRUE,
     elevation = "NONE",
