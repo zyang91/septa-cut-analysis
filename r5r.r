@@ -25,7 +25,7 @@ library(tidytransit)
 
 options(tigris_use_cache = TRUE)
 # Increase Java memory for routing (adjust as needed)
-options(java.parameters = "-Xmx8G")
+options(java.parameters = "-Xmx10G")
 
 # ---------------------------
 # 1) User Inputs (EDIT THESE)
@@ -74,25 +74,25 @@ ensure_osm_pbf(osm_pbf)
 # ---------------------------
 # message("Downloading TIGER/Line tracts for 5-County SE PA…")
 
-pa_state <- "PA"
-pa_counties <- c("Philadelphia", "Delaware", "Montgomery", "Bucks", "Chester") 
-tracts <- tracts(state = pa_state, county = pa_counties, year = 2023, cb = TRUE, class = "sf") |>
-  st_transform(4326)
-
-# Keep only GEOID + geometry for simplicity
-tracts <- tracts %>% select(GEOID, NAME, ALAND, AWATER, geometry)
-
-# Create interior point centroids for reliable inside points
-tract_centroids <- st_point_on_surface(tracts) %>%
-  mutate(from_id = GEOID) %>%
-  transmute(from_id, geometry)
+# pa_state <- "PA"
+# pa_counties <- c("Philadelphia", "Delaware", "Montgomery", "Bucks", "Chester") 
+# tracts <- tracts(state = pa_state, county = pa_counties, year = 2023, cb = TRUE, class = "sf") |>
+#   st_transform(4326)
+# 
+# # Keep only GEOID + geometry for simplicity
+# tracts <- tracts %>% select(GEOID, NAME, ALAND, AWATER, geometry)
+# 
+# # Create interior point centroids for reliable inside points
+# tract_centroids <- st_point_on_surface(tracts) %>%
+#   mutate(from_id = GEOID) %>%
+#   transmute(from_id, geometry)
 
 # Origins data.frame for r5r (lon/lat columns)
-origins <- tract_centroids %>%
-  st_transform(4326) %>%
-  mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2]) %>%
-  st_drop_geometry() %>%
-  select(id = from_id, lon, lat)
+# origins <- tract_centroids %>%
+#   st_transform(4326) %>%
+#   mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2]) %>%
+#   st_drop_geometry() %>%
+#   select(id = from_id, lon, lat)
 
 # Destination (City Hall)
 cityhall_lon <- -75.1636
@@ -104,25 +104,33 @@ departure_time <- ymd_hms("2025-10-16 07:30:00")
 #     by buffering GTFS stops and intersecting (SIMPLE PATHS)
 # ---------------------------
 
-message("Reading GTFS (before) stops and building service buffer…")
-stops_before <- tidytransit::read_gtfs(gtfs_before)$stops %>%
-  sf::st_as_sf(coords = c("stop_lon","stop_lat"), crs = 4326, remove = FALSE) %>%
-  sf::st_transform(3857)
-service_area <- stops_before %>% st_buffer(service_buffer_m) %>% st_union() %>% st_make_valid() %>% st_transform(4326)
-
-tracts_served <- tracts %>% st_filter(service_area)  # only tracts intersecting service area
+# message("Reading GTFS (before) stops and building service buffer…")
+# stops_before <- tidytransit::read_gtfs(gtfs_before)$stops %>%
+#   sf::st_as_sf(coords = c("stop_lon","stop_lat"), crs = 4326, remove = FALSE) %>%
+#   sf::st_transform(3857)
+# service_area <- stops_before %>% st_buffer(service_buffer_m) %>% st_union() %>% st_make_valid() %>% st_transform(4326)
+# 
+# tracts_served <- tracts %>% st_filter(service_area)  # only tracts intersecting service area
 
 # Update centroids/origins for routing to limit computations
-tract_centroids_served <- tract_centroids %>% semi_join(tracts_served %>% st_drop_geometry(), by = c("from_id" = "GEOID"))
-origins_served <- tract_centroids_served %>%
-  st_transform(4326) %>%
-  mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2]) %>%
-  st_drop_geometry() %>%
-  select(id = from_id, lon, lat)
+# tract_centroids_served <- tract_centroids %>% semi_join(tracts_served %>% st_drop_geometry(), by = c("from_id" = "GEOID"))
+# origins_served <- tract_centroids_served %>%
+#   st_transform(4326) %>%
+#   mutate(lon = st_coordinates(.)[,1], lat = st_coordinates(.)[,2]) %>%
+#   st_drop_geometry() %>%
+#   select(id = from_id, lon, lat)
 
+#st_write(tracts_served,"data/outputs/tracts_served.gpkg", delete_dsn = TRUE, quiet = TRUE)
+# st_write(tract_centroids_served,"data/outputs/tract_centroids_served.gpkg", delete_dsn = TRUE, quiet = TRUE)
 # ---------------------------
 # 4) Build R5 core and compute travel times (BEFORE cuts)
 # ---------------------------
+
+modes          <- c("WALK","TRANSIT")
+max_walk_dist  <- 3000     # meters
+max_trip_duration <- 180   # minutes; cap long searches
+num_itineraries   <- 3     # sample multiple itineraries
+walk_speed        <- 1.3   # m/s ~ 10.8 km/h if you want 1.3 m/s typical, change
 
 build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, departure_time,
                                modes, max_walk_dist, max_trip_duration, num_itineraries, walk_speed){
@@ -167,11 +175,7 @@ build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, d
   ttm
 }
 
-modes          <- c("WALK","TRANSIT")
-max_walk_dist  <- 3000     # meters
-max_trip_duration <- 180   # minutes; cap long searches
-num_itineraries   <- 3     # sample multiple itineraries
-walk_speed        <- 1.3   # m/s ~ 10.8 km/h if you want 1.3 m/s typical, change
+
 
 
 # BEFORE
