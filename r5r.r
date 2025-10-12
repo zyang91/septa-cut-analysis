@@ -81,7 +81,7 @@ options(java.parameters = "-Xmx16G")
 cityhall_lon <- -75.1636
 cityhall_lat <-  39.9526
 destinations <- tibble(id = "CityHall", lon = cityhall_lon, lat = cityhall_lat)
-departure_time <- ymd_hms("2025-10-16 07:30:00")
+departure_time <- ymd_hms("2025-10-16 11:30:00")
 # ---------------------------
 # 3) (Optional) Limit tracts to those overlapping GTFS service area
 #     by buffering GTFS stops and intersecting (SIMPLE PATHS)
