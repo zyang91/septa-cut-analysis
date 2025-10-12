@@ -1,0 +1,1099 @@
+10:53:57.881 [INFO ] com.conveyal.osmlib.OSM - OSM will be stored in file C:\Users\zyang\OneDrive\Desktop\septa-cut-analysis\data\pennsylvania-latest.osm.pbf.mapdb.
+10:53:58.314 [INFO ] com.conveyal.osmlib.OSM - No OSM tables exist yet, they will be created.
+10:53:58.362 [INFO ] com.conveyal.osmlib.OSM - Reading OSM from file 'C:\Users\zyang\OneDrive\Desktop\septa-cut-analysis\data\pennsylvania-latest.osm.pbf'.
+10:53:58.446 [INFO ] com.conveyal.osmlib.PBFInput - PBF file has a replication timestamp of 2025-10-10T20:20:41Z
+10:53:58.532 [INFO ] com.conveyal.osmlib.PBFInput - node 1
+10:54:08.566 [INFO ] com.conveyal.osmlib.PBFInput - node 5.0M
+10:54:16.918 [INFO ] com.conveyal.osmlib.PBFInput - node 10.0M
+10:54:24.840 [INFO ] com.conveyal.osmlib.PBFInput - node 15.0M
+10:54:32.694 [INFO ] com.conveyal.osmlib.PBFInput - node 20.0M
+10:54:40.636 [INFO ] com.conveyal.osmlib.PBFInput - node 25.0M
+10:54:48.457 [INFO ] com.conveyal.osmlib.PBFInput - node 30.0M
+10:54:56.333 [INFO ] com.conveyal.osmlib.PBFInput - node 35.0M
+10:55:04.110 [INFO ] com.conveyal.osmlib.PBFInput - node 40.0M
+10:55:05.736 [INFO ] com.conveyal.osmlib.PBFInput - way 1
+10:55:14.643 [INFO ] com.conveyal.osmlib.PBFInput - way 1.0M
+10:55:19.319 [INFO ] com.conveyal.osmlib.PBFInput - way 2.0M
+10:55:24.785 [INFO ] com.conveyal.osmlib.PBFInput - way 3.0M
+10:55:29.455 [INFO ] com.conveyal.osmlib.PBFInput - way 4.0M
+10:55:32.336 [INFO ] com.conveyal.osmlib.PBFInput - relation 1
+10:55:35.494 [INFO ] com.conveyal.osmlib.PBFInput - Done parsing PBF.
+10:55:35.494 [INFO ] com.conveyal.osmlib.PBFInput - Read 41021915 nodes, 4531554 ways, 52387 relations.
+10:55:35.884 [INFO ] com.conveyal.r5.streets.StreetLayer - Making street edges from OSM ways...
+10:55:35.938 [ERROR] com.conveyal.r5.streets.StreetLayer - Continuing to load but ignoring generalized costs due to exception: java.lang.RuntimeException: All ways are expected to have generalized cost tags. Missing: slope_1:forward
+10:56:37.218 [WARN ] com.conveyal.r5.labeling.LevelOfTrafficStressLabeler - Unrecognized values for lane tag: [1.5]
+10:56:37.218 [INFO ] com.conveyal.r5.streets.StreetLayer - This street layer does not contain per-edge traversal and turn times.
+10:56:37.339 [INFO ] com.conveyal.r5.streets.StreetLayer - Surrogate LTS:
+  1: 3824536 edges
+  2: 201055 edges
+  3: 502685 edges
+  4: 748012 edges
+  Unknown: 2186562 edges
+10:56:40.407 [INFO ] com.conveyal.r5.streets.StreetLayer - Done making street edges.
+10:56:40.407 [INFO ] com.conveyal.r5.streets.StreetLayer - Made 2954797 vertices and 7462850 edges.
+10:56:40.407 [INFO ] com.conveyal.r5.streets.StreetLayer - Found 7 P+R node candidates
+10:56:40.407 [INFO ] com.conveyal.r5.streets.StreetLayer - Building edge lists from edges...
+10:56:40.881 [INFO ] com.conveyal.r5.streets.StreetLayer - Done building edge lists.
+10:56:41.600 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Removing islands for mode CAR
+10:56:57.304 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Found 648288 strong components for mode CAR using Tarjan's algorithm in 15.704sec
+10:56:57.440 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Removed 648259 strong component (islands) with fewer than 40 vertices for mode CAR in 0.136sec. 677026 vertices removed.
+10:56:57.442 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Removing islands for mode WALK
+10:57:03.712 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Found 281286 strong components for mode WALK using Tarjan's algorithm in 6.27sec
+10:57:03.776 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Removed 281191 strong component (islands) with fewer than 40 vertices for mode WALK in 0.062sec. 327853 vertices removed.
+10:57:03.778 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Removing islands for mode BICYCLE
+10:57:10.572 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Found 295710 strong components for mode BICYCLE using Tarjan's algorithm in 6.793sec
+10:57:10.632 [INFO ] com.conveyal.r5.streets.TarjanIslandPruner - Removed 295616 strong component (islands) with fewer than 40 vertices for mode BICYCLE in 0.055sec. 325776 vertices removed.
+10:57:10.632 [INFO ] com.conveyal.r5.streets.StreetLayer - Indexing streets...
+10:57:13.343 [INFO ] com.conveyal.r5.streets.StreetLayer - Done indexing streets.
+10:57:15.296 [INFO ] com.conveyal.r5.streets.StreetLayer - Made 107 P+R vertices
+10:57:15.822 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 1168738 has no restriction tag, skipping
+10:57:15.829 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 1474857, skipping
+10:57:15.831 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 1583779, skipping
+10:57:15.840 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 1783149, skipping
+10:57:15.841 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 1783150, skipping
+10:57:15.849 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 2594058, does not have from, to and via, skipping
+10:57:15.859 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3299818, does not have from, to and via, skipping
+10:57:15.861 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3419421 has no restriction tag, skipping
+10:57:15.867 [ERROR] com.conveyal.r5.streets.StreetLayer - From way enters vertex 267780 twice, restriction 3515447 is therefore ambiguous, skipping
+10:57:15.869 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3517289, does not have from, to and via, skipping
+10:57:15.872 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3587875 has no restriction tag, skipping
+10:57:15.873 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3605134, does not have from, to and via, skipping
+10:57:15.875 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3605255, does not have from, to and via, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3615996, does not have from, to and via, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3615997, does not have from, to and via, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3615998, does not have from, to and via, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3615999, does not have from, to and via, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617949 has no restriction tag, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617950 has no restriction tag, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617951 has no restriction tag, skipping
+10:57:15.876 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617952 has no restriction tag, skipping
+10:57:15.877 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617953 has no restriction tag, skipping
+10:57:15.877 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617954 has no restriction tag, skipping
+10:57:15.877 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617956 has no restriction tag, skipping
+10:57:15.877 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3617957 has no restriction tag, skipping
+10:57:15.877 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3619130, does not have from, to and via, skipping
+10:57:15.883 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3741517, does not have from, to and via, skipping
+10:57:15.886 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 3772316, skipping
+10:57:15.886 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3772318, does not have from, to and via, skipping
+10:57:15.887 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 3789921, skipping
+10:57:15.888 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 3789925, skipping
+10:57:15.888 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 3789926, skipping
+10:57:15.890 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 3809305, does not have from, to and via, skipping
+10:57:15.891 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 3923278 has no restriction tag, skipping
+10:57:15.893 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 4029490 has multiple 'from' members, skipping.
+10:57:15.894 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 4085280, does not have from, to and via, skipping
+10:57:15.895 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 4264270 has no restriction tag, skipping
+10:57:15.898 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 4285253 has no restriction tag, skipping
+10:57:15.898 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 4285254 has no restriction tag, skipping
+10:57:15.898 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 4285311 has no restriction tag, skipping
+10:57:15.899 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 4468625 has no restriction tag, skipping
+10:57:15.930 [WARN ] com.conveyal.r5.streets.StreetLayer - Turn restriction relation 4590880 references nonexistent way 619147613, dropping this relation
+10:57:15.936 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 4790713, does not have from, to and via, skipping
+10:57:15.939 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 4817612, does not have from, to and via, skipping
+10:57:15.943 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 5421040, skipping
+10:57:15.944 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 5421041, skipping
+10:57:15.944 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 5421042, skipping
+10:57:15.944 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 5421043, skipping
+10:57:15.947 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 5513685 has multiple 'to' members, skipping.
+10:57:15.949 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 5576803, does not have from, to and via, skipping
+10:57:15.951 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 5576864, does not have from, to and via, skipping
+10:57:15.952 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 5640040, does not have from, to and via, skipping
+10:57:15.952 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 5816893 has no restriction tag, skipping
+10:57:15.956 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 423392125 for restriction 6293427, skipping
+10:57:15.959 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6408639 has no restriction tag, skipping
+10:57:15.960 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6411054 has no restriction tag, skipping
+10:57:15.963 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6475888, does not have from, to and via, skipping
+10:57:15.963 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6475889, does not have from, to and via, skipping
+10:57:15.965 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6516791 has no restriction tag, skipping
+10:57:15.977 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 6668886, skipping
+10:57:15.981 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6676824, does not have from, to and via, skipping
+10:57:15.983 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6682186 has no restriction tag, skipping
+10:57:15.986 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6688058, does not have from, to and via, skipping
+10:57:15.986 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6688060, does not have from, to and via, skipping
+10:57:15.986 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6688061, does not have from, to and via, skipping
+10:57:15.986 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6688062, does not have from, to and via, skipping
+10:57:15.987 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6700836, does not have from, to and via, skipping
+10:57:15.987 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6700838, does not have from, to and via, skipping
+10:57:15.989 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 6710954, skipping
+10:57:15.989 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6713652 has no restriction tag, skipping
+10:57:15.990 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 423392125 for restriction 6722650, skipping
+10:57:15.998 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813679 has no restriction tag, skipping
+10:57:15.998 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813680 has no restriction tag, skipping
+10:57:15.998 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813681 has no restriction tag, skipping
+10:57:15.999 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813682 has no restriction tag, skipping
+10:57:15.999 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813683 has no restriction tag, skipping
+10:57:15.999 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813684 has no restriction tag, skipping
+10:57:15.999 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813685 has no restriction tag, skipping
+10:57:15.999 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6813686 has no restriction tag, skipping
+10:57:16.001 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6823593 has no restriction tag, skipping
+10:57:16.002 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6823594 has no restriction tag, skipping
+10:57:16.002 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 6823595, skipping
+10:57:16.002 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 6823596, skipping
+10:57:16.002 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6839470 has no restriction tag, skipping
+10:57:16.003 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 6845253 has no restriction tag, skipping
+10:57:16.009 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 6913786, skipping
+10:57:16.009 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 6913787, skipping
+10:57:16.013 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 6981321, does not have from, to and via, skipping
+10:57:16.019 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7062722 has no restriction tag, skipping
+10:57:16.024 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7092695 has no restriction tag, skipping
+10:57:16.025 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7109184 has no restriction tag, skipping
+10:57:16.027 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7134129, does not have from, to and via, skipping
+10:57:16.027 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7134132, does not have from, to and via, skipping
+10:57:16.027 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7134133, does not have from, to and via, skipping
+10:57:16.027 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7134134, does not have from, to and via, skipping
+10:57:16.027 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7134135, does not have from, to and via, skipping
+10:57:16.031 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7149386, does not have from, to and via, skipping
+10:57:16.032 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7149387, does not have from, to and via, skipping
+10:57:16.032 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7149388, does not have from, to and via, skipping
+10:57:16.032 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7149389, does not have from, to and via, skipping
+10:57:16.033 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7157965 has no restriction tag, skipping
+10:57:16.034 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7169769 has no restriction tag, skipping
+10:57:16.036 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7185626, does not have from, to and via, skipping
+10:57:16.040 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7192310 has no restriction tag, skipping
+10:57:16.042 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7204557 has no restriction tag, skipping
+10:57:16.042 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7207056 has no restriction tag, skipping
+10:57:16.045 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7251585, does not have from, to and via, skipping
+10:57:16.045 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7276912 has no restriction tag, skipping
+10:57:16.045 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7276913 has no restriction tag, skipping
+10:57:16.053 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7332769 has no restriction tag, skipping
+10:57:16.053 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7333245 has no restriction tag, skipping
+10:57:16.060 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7381249 has no restriction tag, skipping
+10:57:16.064 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7386981, does not have from, to and via, skipping
+10:57:16.064 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7386982, does not have from, to and via, skipping
+10:57:16.064 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7387393 has no restriction tag, skipping
+10:57:16.064 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7399464 has no restriction tag, skipping
+10:57:16.066 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7412450 has no restriction tag, skipping
+10:57:16.069 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7424389 has no restriction tag, skipping
+10:57:16.073 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 512842759 for restriction 7444507, skipping
+10:57:16.073 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 512903617 for restriction 7445209, skipping
+10:57:16.073 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7445219 has no restriction tag, skipping
+10:57:16.073 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7445220 has no restriction tag, skipping
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - From way enters vertex 1435304 twice, restriction 7445222 is therefore ambiguous, skipping
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1341418 twice, restriction 7445222 is therefore ambiguous, skipping
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - From way enters vertex 1341418 twice, restriction 7445223 is therefore ambiguous, skipping
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1435304 twice, restriction 7445223 is therefore ambiguous, skipping
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 7445246 has multiple 'to' members, skipping.
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7445247, does not have from, to and via, skipping
+10:57:16.074 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7447706 has no restriction tag, skipping
+10:57:16.077 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7479045 has no restriction tag, skipping
+10:57:16.079 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7517183 has no restriction tag, skipping
+10:57:16.079 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7517184 has no restriction tag, skipping
+10:57:16.080 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522383644 for restriction 7553372, skipping
+10:57:16.080 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7553382 has no restriction tag, skipping
+10:57:16.080 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522399571 for restriction 7553464, skipping
+10:57:16.080 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522400849 for restriction 7553476, skipping
+10:57:16.082 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7613341 has no restriction tag, skipping
+10:57:16.084 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7621354 has no restriction tag, skipping
+10:57:16.084 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 7625829 has multiple 'from' members, skipping.
+10:57:16.084 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7625830, does not have from, to and via, skipping
+10:57:16.084 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7632547, does not have from, to and via, skipping
+10:57:16.085 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 7637203, skipping
+10:57:16.085 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 7637210, skipping
+10:57:16.088 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 7650406, skipping
+10:57:16.091 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 7654882, skipping
+10:57:16.091 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 7654883, skipping
+10:57:16.091 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7663378 has no restriction tag, skipping
+10:57:16.091 [ERROR] com.conveyal.r5.streets.StreetLayer - From way enters vertex 1257413 twice, restriction 7686663 is therefore ambiguous, skipping
+10:57:16.091 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 708315 twice, restriction 7686663 is therefore ambiguous, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7690047, does not have from, to and via, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7690049, does not have from, to and via, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7699285, does not have from, to and via, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7733873 has no restriction tag, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7733884 has no restriction tag, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7733886 has no restriction tag, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7733895 has no restriction tag, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7733898 has no restriction tag, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7742784, does not have from, to and via, skipping
+10:57:16.094 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7815354 has no restriction tag, skipping
+10:57:16.101 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7844868 has no restriction tag, skipping
+10:57:16.102 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 7847902, skipping
+10:57:16.105 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7885210 has no restriction tag, skipping
+10:57:16.105 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7889614 has no restriction tag, skipping
+10:57:16.106 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7908539 has no restriction tag, skipping
+10:57:16.110 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7939258 has no restriction tag, skipping
+10:57:16.110 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 7939259 has no restriction tag, skipping
+10:57:16.114 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7970492, does not have from, to and via, skipping
+10:57:16.114 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7970495, does not have from, to and via, skipping
+10:57:16.114 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 7970496, does not have from, to and via, skipping
+10:57:16.118 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8019137, does not have from, to and via, skipping
+10:57:16.118 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8019148, does not have from, to and via, skipping
+10:57:16.120 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050344 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050347 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050348 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050349 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050350 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050352 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050353 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050355 has no restriction tag, skipping
+10:57:16.122 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8050356 has no restriction tag, skipping
+10:57:16.123 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051669 has no restriction tag, skipping
+10:57:16.123 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051670 has no restriction tag, skipping
+10:57:16.123 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051671 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051672 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051673 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051674 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051675 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8051676 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052239 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052240 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052241 has no restriction tag, skipping
+10:57:16.124 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052242 has no restriction tag, skipping
+10:57:16.125 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052243 has no restriction tag, skipping
+10:57:16.125 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052244 has no restriction tag, skipping
+10:57:16.125 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052245 has no restriction tag, skipping
+10:57:16.125 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052246 has no restriction tag, skipping
+10:57:16.125 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052254 has no restriction tag, skipping
+10:57:16.125 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052255 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052260 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052261 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052262 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052263 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052265 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8052266 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055229 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055230 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055243 has no restriction tag, skipping
+10:57:16.126 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055244 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055247 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055248 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055249 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055250 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055251 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055252 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055255 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8055256 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057893 has no restriction tag, skipping
+10:57:16.127 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057894 has no restriction tag, skipping
+10:57:16.129 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057897 has no restriction tag, skipping
+10:57:16.129 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057898 has no restriction tag, skipping
+10:57:16.129 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057902 has no restriction tag, skipping
+10:57:16.129 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057903 has no restriction tag, skipping
+10:57:16.129 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057904 has no restriction tag, skipping
+10:57:16.130 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8057905 has no restriction tag, skipping
+10:57:16.130 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8075762 has no restriction tag, skipping
+10:57:16.130 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8075763 has no restriction tag, skipping
+10:57:16.131 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8075769 has no restriction tag, skipping
+10:57:16.131 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8075773 has no restriction tag, skipping
+10:57:16.131 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8075776 has no restriction tag, skipping
+10:57:16.131 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8075777 has no restriction tag, skipping
+10:57:16.132 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8094601 has no restriction tag, skipping
+10:57:16.134 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8137560 has no restriction tag, skipping
+10:57:16.140 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8299588 has no restriction tag, skipping
+10:57:16.141 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8300176 has no restriction tag, skipping
+10:57:16.141 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8300200 has no restriction tag, skipping
+10:57:16.142 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8302733 has no restriction tag, skipping
+10:57:16.142 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8302735 has no restriction tag, skipping
+10:57:16.142 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8302741 has no restriction tag, skipping
+10:57:16.143 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8303164 has no restriction tag, skipping
+10:57:16.144 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8303216 has no restriction tag, skipping
+10:57:16.144 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8303521 has no restriction tag, skipping
+10:57:16.144 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8304244, does not have from, to and via, skipping
+10:57:16.144 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8305558 has no restriction tag, skipping
+10:57:16.145 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8325021 has no restriction tag, skipping
+10:57:16.146 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8328914, does not have from, to and via, skipping
+10:57:16.146 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8328916, does not have from, to and via, skipping
+10:57:16.147 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8333201 has no restriction tag, skipping
+10:57:16.147 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8334291 has no restriction tag, skipping
+10:57:16.147 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8335757 has no restriction tag, skipping
+10:57:16.147 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8336114 has no restriction tag, skipping
+10:57:16.147 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8336115 has no restriction tag, skipping
+10:57:16.148 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8336155 has no restriction tag, skipping
+10:57:16.150 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8336745 has no restriction tag, skipping
+10:57:16.150 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8338218 has no restriction tag, skipping
+10:57:16.150 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 8340491, skipping
+10:57:16.151 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8345399 has no restriction tag, skipping
+10:57:16.151 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8345400 has no restriction tag, skipping
+10:57:16.151 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8345401 has no restriction tag, skipping
+10:57:16.152 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8367143 has no restriction tag, skipping
+10:57:16.156 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522400849 for restriction 8421947, skipping
+10:57:16.156 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 604214582 for restriction 8422151, skipping
+10:57:16.156 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 604214582 for restriction 8422152, skipping
+10:57:16.156 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 604218705 for restriction 8422188, skipping
+10:57:16.156 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 604218705 for restriction 8422189, skipping
+10:57:16.156 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 604225793 for restriction 8422214, skipping
+10:57:16.157 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 604225793 for restriction 8422215, skipping
+10:57:16.157 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 512842759 for restriction 8422325, skipping
+10:57:16.158 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8427836 has no restriction tag, skipping
+10:57:16.158 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8427837 has no restriction tag, skipping
+10:57:16.162 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 8451043 has multiple 'from' members, skipping.
+10:57:16.162 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8451363, does not have from, to and via, skipping
+10:57:16.162 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8451364, does not have from, to and via, skipping
+10:57:16.164 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8464813, does not have from, to and via, skipping
+10:57:16.164 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8464814, does not have from, to and via, skipping
+10:57:16.166 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8592998 has no restriction tag, skipping
+10:57:16.166 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 621177322 for restriction 8617844, skipping
+10:57:16.166 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 621177322 for restriction 8617845, skipping
+10:57:16.169 [WARN ] com.conveyal.r5.streets.StreetLayer - Vertex 5896902943 not found to use as via node for restriction 8674830, skipping this restriction
+10:57:16.169 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8678560, does not have from, to and via, skipping
+10:57:16.173 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8730715, does not have from, to and via, skipping
+10:57:16.173 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 629843298 for restriction 8765719, skipping
+10:57:16.173 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 629843298 for restriction 8765720, skipping
+10:57:16.179 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8766093, does not have from, to and via, skipping
+10:57:16.179 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8766094, does not have from, to and via, skipping
+10:57:16.179 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 8774557, skipping
+10:57:16.179 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 8774558, skipping
+10:57:16.180 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 633271770 for restriction 8804802, skipping
+10:57:16.180 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 633271770 for restriction 8804803, skipping
+10:57:16.180 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8805018, does not have from, to and via, skipping
+10:57:16.180 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8805832 has no restriction tag, skipping
+10:57:16.180 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 8805833 has no restriction tag, skipping
+10:57:16.184 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8876885, no way from from to to via via, skipping
+10:57:16.188 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 8920598, does not have from, to and via, skipping
+10:57:16.209 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9068947 has no restriction tag, skipping
+10:57:16.209 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9068948 has no restriction tag, skipping
+10:57:16.211 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9114730 has no restriction tag, skipping
+10:57:16.212 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9114731 has no restriction tag, skipping
+10:57:16.212 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9114732 has no restriction tag, skipping
+10:57:16.212 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 9151310, skipping
+10:57:16.212 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 9151311, skipping
+10:57:16.217 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9223659, does not have from, to and via, skipping
+10:57:16.217 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9225644, does not have from, to and via, skipping
+10:57:16.217 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9231196, does not have from, to and via, skipping
+10:57:16.219 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9380904 has no restriction tag, skipping
+10:57:16.219 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9380905 has no restriction tag, skipping
+10:57:16.219 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9415001, does not have from, to and via, skipping
+10:57:16.219 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9417376, does not have from, to and via, skipping
+10:57:16.219 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9417378, does not have from, to and via, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493044 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493045 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493046 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493047 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493048 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493049 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493052 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493053 has no restriction tag, skipping
+10:57:16.224 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9493054 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9497984, does not have from, to and via, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513499 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513500 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513501 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513502 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513503 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513505 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513506 has no restriction tag, skipping
+10:57:16.225 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513507 has no restriction tag, skipping
+10:57:16.226 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513508 has no restriction tag, skipping
+10:57:16.226 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513509 has no restriction tag, skipping
+10:57:16.226 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513510 has no restriction tag, skipping
+10:57:16.226 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9513511 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515318 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515319 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515437 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515438 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515441 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515442 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515670 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515671 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515680 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515681 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515682 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515835 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515841 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515878 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9515879 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9516027 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9516028 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9516029 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9516030 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9516262 has no restriction tag, skipping
+10:57:16.227 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9516263 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9519940 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9519941 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9519942 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9519943 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9520179 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9520255 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526477 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526478 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526479 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526969 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526970 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526972 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526973 has no restriction tag, skipping
+10:57:16.229 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9526974 has no restriction tag, skipping
+10:57:16.230 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527609 has no restriction tag, skipping
+10:57:16.230 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527610 has no restriction tag, skipping
+10:57:16.230 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527623 has no restriction tag, skipping
+10:57:16.230 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527624 has no restriction tag, skipping
+10:57:16.230 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527628 has no restriction tag, skipping
+10:57:16.230 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527634 has no restriction tag, skipping
+10:57:16.231 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527641 has no restriction tag, skipping
+10:57:16.231 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9527642 has no restriction tag, skipping
+10:57:16.231 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9530314 has no restriction tag, skipping
+10:57:16.231 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9530315 has no restriction tag, skipping
+10:57:16.231 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9530819 has no restriction tag, skipping
+10:57:16.231 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9530820 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531269 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531270 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531271 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531272 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531308 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531309 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531310 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531331 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531332 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531333 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531334 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531339 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531340 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531341 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531345 has no restriction tag, skipping
+10:57:16.232 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531347 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531349 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531350 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531366 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531367 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531368 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531369 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9531382, does not have from, to and via, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9531384, does not have from, to and via, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531386 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9531387 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535642 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535643 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535644 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535645 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535646 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535647 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535648 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535649 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535650 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535658 has no restriction tag, skipping
+10:57:16.233 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535659 has no restriction tag, skipping
+10:57:16.235 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535660 has no restriction tag, skipping
+10:57:16.235 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9535661 has no restriction tag, skipping
+10:57:16.235 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9540087 has no restriction tag, skipping
+10:57:16.235 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9540088 has no restriction tag, skipping
+10:57:16.235 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9540089 has no restriction tag, skipping
+10:57:16.235 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9540090 has no restriction tag, skipping
+10:57:16.236 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9596811 has no restriction tag, skipping
+10:57:16.237 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9675171 has no restriction tag, skipping
+10:57:16.238 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 9694645 has no restriction tag, skipping
+10:57:16.241 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9814189, does not have from, to and via, skipping
+10:57:16.241 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9814190, does not have from, to and via, skipping
+10:57:16.241 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9814191, does not have from, to and via, skipping
+10:57:16.241 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9814192, does not have from, to and via, skipping
+10:57:16.244 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9870502, does not have from, to and via, skipping
+10:57:16.244 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 9877591, skipping
+10:57:16.245 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9889552, does not have from, to and via, skipping
+10:57:16.247 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9904297, does not have from, to and via, skipping
+10:57:16.248 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9912909, does not have from, to and via, skipping
+10:57:16.248 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 9939227, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046776, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046777, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046778, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046779, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046780, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046781, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046782, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10046783, does not have from, to and via, skipping
+10:57:16.253 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10052700, does not have from, to and via, skipping
+10:57:16.255 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10079698, does not have from, to and via, skipping
+10:57:16.255 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10079700, does not have from, to and via, skipping
+10:57:16.259 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 10082099, skipping
+10:57:16.259 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 10082102, skipping
+10:57:16.259 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 10093108 has no restriction tag, skipping
+10:57:16.260 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10118963, does not have from, to and via, skipping
+10:57:16.260 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10130725, does not have from, to and via, skipping
+10:57:16.260 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10130727, does not have from, to and via, skipping
+10:57:16.260 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 10131858, skipping
+10:57:16.260 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 10131861, skipping
+10:57:16.260 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 10138936 has no restriction tag, skipping
+10:57:16.260 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 10138937 has no restriction tag, skipping
+10:57:16.266 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 10174010 has ambiguous via ways (multiple paths through via ways between from and to), skipping
+10:57:16.270 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10259916, does not have from, to and via, skipping
+10:57:16.272 [WARN ] com.conveyal.r5.streets.StreetLayer - Turn restriction relation 10310792 references nonexistent way 742784588, dropping this relation
+10:57:16.272 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 10314500, skipping
+10:57:16.272 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 10314503, skipping
+10:57:16.276 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10370295, does not have from, to and via, skipping
+10:57:16.277 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10370296, does not have from, to and via, skipping
+10:57:16.277 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10370297, does not have from, to and via, skipping
+10:57:16.277 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10370298, does not have from, to and via, skipping
+10:57:16.278 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10388546, does not have from, to and via, skipping
+10:57:16.279 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10390323, does not have from, to and via, skipping
+10:57:16.279 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10390324, does not have from, to and via, skipping
+10:57:16.281 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10428347, does not have from, to and via, skipping
+10:57:16.281 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10428350, does not have from, to and via, skipping
+10:57:16.285 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10482140, does not have from, to and via, skipping
+10:57:16.285 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10482141, does not have from, to and via, skipping
+10:57:16.285 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10482142, does not have from, to and via, skipping
+10:57:16.285 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10482143, does not have from, to and via, skipping
+10:57:16.286 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10484934, does not have from, to and via, skipping
+10:57:16.287 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10484935, does not have from, to and via, skipping
+10:57:16.287 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10484936, does not have from, to and via, skipping
+10:57:16.287 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10484937, does not have from, to and via, skipping
+10:57:16.287 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10484938, does not have from, to and via, skipping
+10:57:16.288 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10484939, does not have from, to and via, skipping
+10:57:16.288 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10511144, does not have from, to and via, skipping
+10:57:16.288 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10511147, does not have from, to and via, skipping
+10:57:16.295 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10669261, does not have from, to and via, skipping
+10:57:16.295 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10669263, does not have from, to and via, skipping
+10:57:16.295 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10669264, does not have from, to and via, skipping
+10:57:16.296 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10676522, does not have from, to and via, skipping
+10:57:16.296 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 10676523, does not have from, to and via, skipping
+10:57:16.299 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 10777096 has no restriction tag, skipping
+10:57:16.304 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 10847821 has no restriction tag, skipping
+10:57:16.307 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 394237080 for restriction 11002569, skipping
+10:57:16.307 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 394237080 for restriction 11002570, skipping
+10:57:16.308 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11038940 has no restriction tag, skipping
+10:57:16.308 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11049151 has no restriction tag, skipping
+10:57:16.308 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11049175 has no restriction tag, skipping
+10:57:16.308 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11049192 has no restriction tag, skipping
+10:57:16.308 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11049193 has no restriction tag, skipping
+10:57:16.310 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11072210 has no restriction tag, skipping
+10:57:16.311 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11092911 has no restriction tag, skipping
+10:57:16.311 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11093068 has no restriction tag, skipping
+10:57:16.311 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11105473, does not have from, to and via, skipping
+10:57:16.311 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11105474, does not have from, to and via, skipping
+10:57:16.311 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11105476, does not have from, to and via, skipping
+10:57:16.311 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11105484, does not have from, to and via, skipping
+10:57:16.314 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11201250 has no restriction tag, skipping
+10:57:16.314 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 11226568 has ambiguous via ways (multiple paths through via ways between from and to), skipping
+10:57:16.315 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11260946 has no restriction tag, skipping
+10:57:16.316 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11260953 has no restriction tag, skipping
+10:57:16.316 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11260990 has no restriction tag, skipping
+10:57:16.317 [WARN ] com.conveyal.r5.streets.StreetLayer - Turn restriction relation 11286995 references nonexistent way 1122944801, dropping this relation
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323491 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323533 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323598 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323700 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323808 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323904 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323970 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11323980 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11324096 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11324518 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11324579 has no restriction tag, skipping
+10:57:16.318 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11324849 has no restriction tag, skipping
+10:57:16.320 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11382373 has no restriction tag, skipping
+10:57:16.320 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11382740 has no restriction tag, skipping
+10:57:16.320 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11383195 has no restriction tag, skipping
+10:57:16.321 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11477798 has no restriction tag, skipping
+10:57:16.321 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11488794 has no restriction tag, skipping
+10:57:16.322 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11491743, skipping
+10:57:16.322 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11491822 has no restriction tag, skipping
+10:57:16.322 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11494955 has no restriction tag, skipping
+10:57:16.322 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11495792 has no restriction tag, skipping
+10:57:16.322 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11498240 has no restriction tag, skipping
+10:57:16.322 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11501658 has no restriction tag, skipping
+10:57:16.322 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11502475 has no restriction tag, skipping
+10:57:16.322 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 837560129 for restriction 11510049, skipping
+10:57:16.323 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 837560129 for restriction 11510050, skipping
+10:57:16.323 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 837560144 for restriction 11510051, skipping
+10:57:16.323 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 837560144 for restriction 11510052, skipping
+10:57:16.324 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11531493 has no restriction tag, skipping
+10:57:16.325 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11531494 has no restriction tag, skipping
+10:57:16.325 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11532976 has no restriction tag, skipping
+10:57:16.327 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11539115, does not have from, to and via, skipping
+10:57:16.327 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11539116, does not have from, to and via, skipping
+10:57:16.327 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11545225, does not have from, to and via, skipping
+10:57:16.327 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11545227, does not have from, to and via, skipping
+10:57:16.329 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11555457 has no restriction tag, skipping
+10:57:16.329 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11570020 has no restriction tag, skipping
+10:57:16.329 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11590519 has no restriction tag, skipping
+10:57:16.329 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11594485 has no restriction tag, skipping
+10:57:16.329 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11595670 has no restriction tag, skipping
+10:57:16.331 [WARN ] com.conveyal.r5.streets.StreetLayer - Vertex 271264788 not found to use as via node for restriction 11687071, skipping this restriction
+10:57:16.332 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 2323470 twice, restriction 11713392 is therefore ambiguous, skipping
+10:57:16.334 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11748958 has no restriction tag, skipping
+10:57:16.334 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11752746 has no restriction tag, skipping
+10:57:16.334 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11752838 has no restriction tag, skipping
+10:57:16.336 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 11798785 has multiple 'from' members, skipping.
+10:57:16.336 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 11798786 has multiple 'from' members, skipping.
+10:57:16.336 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11815138 has no restriction tag, skipping
+10:57:16.337 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11834615, skipping
+10:57:16.337 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11834616, skipping
+10:57:16.337 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11887338 has no restriction tag, skipping
+10:57:16.337 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11901724 has no restriction tag, skipping
+10:57:16.339 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11920774, does not have from, to and via, skipping
+10:57:16.339 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11921074, does not have from, to and via, skipping
+10:57:16.339 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 11921075, does not have from, to and via, skipping
+10:57:16.348 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11991044, skipping
+10:57:16.348 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11991045, skipping
+10:57:16.348 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11991046, skipping
+10:57:16.348 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 11991047, skipping
+10:57:16.348 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11993229 has no restriction tag, skipping
+10:57:16.348 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11996084 has no restriction tag, skipping
+10:57:16.353 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 11996203 has no restriction tag, skipping
+10:57:16.356 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12045791, does not have from, to and via, skipping
+10:57:16.361 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12182198 has no restriction tag, skipping
+10:57:16.361 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12225053 has no restriction tag, skipping
+10:57:16.361 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12225108 has no restriction tag, skipping
+10:57:16.366 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 2344611 twice, restriction 12237564 is therefore ambiguous, skipping
+10:57:16.366 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1616681 twice, restriction 12239481 is therefore ambiguous, skipping
+10:57:16.367 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1406045 twice, restriction 12239752 is therefore ambiguous, skipping
+10:57:16.367 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12239793 has no restriction tag, skipping
+10:57:16.367 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 806656651 for restriction 12240491, skipping
+10:57:16.369 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522383644 for restriction 12240884, skipping
+10:57:16.369 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12243483 has no restriction tag, skipping
+10:57:16.369 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 12243615 has multiple 'to' members, skipping.
+10:57:16.372 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12248562 has no restriction tag, skipping
+10:57:16.373 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12255706, skipping
+10:57:16.373 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12255707, skipping
+10:57:16.373 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12257181 has no restriction tag, skipping
+10:57:16.373 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12257368 has no restriction tag, skipping
+10:57:16.373 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12257369 has no restriction tag, skipping
+10:57:16.373 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12257522 has no restriction tag, skipping
+10:57:16.374 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12261947 has no restriction tag, skipping
+10:57:16.375 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12265139 has no restriction tag, skipping
+10:57:16.375 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12265182 has no restriction tag, skipping
+10:57:16.376 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12269205 has no restriction tag, skipping
+10:57:16.376 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12269322 has no restriction tag, skipping
+10:57:16.376 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12269650 has no restriction tag, skipping
+10:57:16.376 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12272522, does not have from, to and via, skipping
+10:57:16.376 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12272523, does not have from, to and via, skipping
+10:57:16.377 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12273069 has no restriction tag, skipping
+10:57:16.377 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12273581, does not have from, to and via, skipping
+10:57:16.378 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12303944 has no restriction tag, skipping
+10:57:16.378 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12306950 has no restriction tag, skipping
+10:57:16.383 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12452463 has no restriction tag, skipping
+10:57:16.384 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12452568 has no restriction tag, skipping
+10:57:16.385 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12476455 has no restriction tag, skipping
+10:57:16.385 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12476456 has no restriction tag, skipping
+10:57:16.385 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12489855, skipping
+10:57:16.385 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12489856, skipping
+10:57:16.387 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12517663 has no restriction tag, skipping
+10:57:16.388 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12521077, does not have from, to and via, skipping
+10:57:16.388 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12523083 has no restriction tag, skipping
+10:57:16.391 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12541366, skipping
+10:57:16.391 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12541369, skipping
+10:57:16.392 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12614365, does not have from, to and via, skipping
+10:57:16.393 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12618100, skipping
+10:57:16.393 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12618101, skipping
+10:57:16.393 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12618105, skipping
+10:57:16.393 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 12618107, skipping
+10:57:16.393 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12620270 has no restriction tag, skipping
+10:57:16.393 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12620271 has no restriction tag, skipping
+10:57:16.393 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12629929, does not have from, to and via, skipping
+10:57:16.394 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12656929 has no restriction tag, skipping
+10:57:16.396 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12791251 has no restriction tag, skipping
+10:57:16.397 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12818793 has no restriction tag, skipping
+10:57:16.397 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12818794 has no restriction tag, skipping
+10:57:16.397 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 12846036 has multiple 'to' members, skipping.
+10:57:16.399 [ERROR] com.conveyal.r5.streets.StreetLayer - From way enters vertex 811875 twice, restriction 12850125 is therefore ambiguous, skipping
+10:57:16.399 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12860376 has no restriction tag, skipping
+10:57:16.399 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 12869046 has multiple 'to' members, skipping.
+10:57:16.399 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 12869047 has multiple 'to' members, skipping.
+10:57:16.400 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12901623 has no restriction tag, skipping
+10:57:16.401 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12901624 has no restriction tag, skipping
+10:57:16.401 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12901625 has no restriction tag, skipping
+10:57:16.401 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12901626 has no restriction tag, skipping
+10:57:16.402 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12938458, does not have from, to and via, skipping
+10:57:16.402 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 12938459 has multiple 'to' members, skipping.
+10:57:16.402 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12938460, does not have from, to and via, skipping
+10:57:16.404 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 12942649 has no restriction tag, skipping
+10:57:16.405 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12988370, does not have from, to and via, skipping
+10:57:16.406 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 12988371, does not have from, to and via, skipping
+10:57:16.408 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13045047, does not have from, to and via, skipping
+10:57:16.408 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13045048, does not have from, to and via, skipping
+10:57:16.408 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13045049, does not have from, to and via, skipping
+10:57:16.408 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13045051, does not have from, to and via, skipping
+10:57:16.408 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13045118, does not have from, to and via, skipping
+10:57:16.408 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13047981, does not have from, to and via, skipping
+10:57:16.409 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13063601, does not have from, to and via, skipping
+10:57:16.409 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13081899, does not have from, to and via, skipping
+10:57:16.409 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13108296 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13134130 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146524 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146525 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146526 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146527 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146528 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146529 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146530 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146531 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146532 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146533 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146534 has no restriction tag, skipping
+10:57:16.410 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13146535 has no restriction tag, skipping
+10:57:16.413 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13235138 has no restriction tag, skipping
+10:57:16.413 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13255647, does not have from, to and via, skipping
+10:57:16.415 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13375011, does not have from, to and via, skipping
+10:57:16.418 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13502158 has no restriction tag, skipping
+10:57:16.419 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13535698 has no restriction tag, skipping
+10:57:16.420 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13561180 has no restriction tag, skipping
+10:57:16.420 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13561442 has no restriction tag, skipping
+10:57:16.425 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13609132 has no restriction tag, skipping
+10:57:16.446 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13817553 has no restriction tag, skipping
+10:57:16.447 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 13817637, does not have from, to and via, skipping
+10:57:16.447 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13817732 has no restriction tag, skipping
+10:57:16.451 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 1040505478 for restriction 13926258, skipping
+10:57:16.452 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 13936932 has no restriction tag, skipping
+10:57:16.455 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14046950 has no restriction tag, skipping
+10:57:16.455 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 14053476, skipping
+10:57:16.457 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14054042, does not have from, to and via, skipping
+10:57:16.458 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14074535 has no restriction tag, skipping
+10:57:16.458 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14097439, does not have from, to and via, skipping
+10:57:16.459 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14097440, does not have from, to and via, skipping
+10:57:16.459 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 388543814 for restriction 14104527, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14196559 has no restriction tag, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14252779, does not have from, to and via, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14258644 has no restriction tag, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14258645 has no restriction tag, skipping
+10:57:16.462 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522399571 for restriction 14277518, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14278362 has no restriction tag, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - From way enters vertex 1616681 twice, restriction 14278369 is therefore ambiguous, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14290216 has no restriction tag, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14298684, does not have from, to and via, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14299423, does not have from, to and via, skipping
+10:57:16.462 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14299424, does not have from, to and via, skipping
+10:57:16.468 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14329940, does not have from, to and via, skipping
+10:57:16.468 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14329941, does not have from, to and via, skipping
+10:57:16.470 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14368251 has no restriction tag, skipping
+10:57:16.470 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14371109 has no restriction tag, skipping
+10:57:16.470 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14371951, does not have from, to and via, skipping
+10:57:16.472 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14446180 has no restriction tag, skipping
+10:57:16.475 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 14547126 has multiple 'from' members, skipping.
+10:57:16.475 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 1092594026 for restriction 14552959, skipping
+10:57:16.475 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 14554053 has multiple 'to' members, skipping.
+10:57:16.475 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14554054, does not have from, to and via, skipping
+10:57:16.475 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 14554055 has multiple 'from' members, skipping.
+10:57:16.477 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14579525 has no restriction tag, skipping
+10:57:16.477 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14619400 has no restriction tag, skipping
+10:57:16.477 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 14650238, skipping
+10:57:16.477 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14659182 has no restriction tag, skipping
+10:57:16.484 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 14702529, skipping
+10:57:16.484 [WARN ] com.conveyal.r5.streets.StreetLayer - Turn restriction relation 14715008 references nonexistent way 1063604319, dropping this relation
+10:57:16.484 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 14717763 has no restriction tag, skipping
+10:57:16.484 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 14734110, skipping
+10:57:16.487 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14925380, does not have from, to and via, skipping
+10:57:16.487 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 14925381, does not have from, to and via, skipping
+10:57:16.487 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 14946629 has multiple 'to' members, skipping.
+10:57:16.489 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 15003070 has no restriction tag, skipping
+10:57:16.490 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 15030388, skipping
+10:57:16.490 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 15030680, does not have from, to and via, skipping
+10:57:16.491 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 15074699, skipping
+10:57:16.494 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 15590646 has no restriction tag, skipping
+10:57:16.495 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 15630147, does not have from, to and via, skipping
+10:57:16.495 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 15644815, does not have from, to and via, skipping
+10:57:16.496 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 15743807 has no restriction tag, skipping
+10:57:16.498 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 15824051 has no restriction tag, skipping
+10:57:16.500 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 15931786, skipping
+10:57:16.501 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 15980681 has no restriction tag, skipping
+10:57:16.501 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 15983401 has no restriction tag, skipping
+10:57:16.502 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16031524 has no restriction tag, skipping
+10:57:16.504 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16061711, does not have from, to and via, skipping
+10:57:16.505 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16091351 has no restriction tag, skipping
+10:57:16.505 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16091389 has no restriction tag, skipping
+10:57:16.507 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16122652, does not have from, to and via, skipping
+10:57:16.508 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16148086 has no restriction tag, skipping
+10:57:16.509 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 16171740 has ambiguous via ways (multiple paths through via ways between from and to), skipping
+10:57:16.509 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1406045 twice, restriction 16171741 is therefore ambiguous, skipping
+10:57:16.510 [WARN ] com.conveyal.r5.streets.StreetLayer - Turn restriction relation 16177764 references nonexistent way 331629265, dropping this relation
+10:57:16.510 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16180044, does not have from, to and via, skipping
+10:57:16.510 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16192010 has no restriction tag, skipping
+10:57:16.511 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16198467, does not have from, to and via, skipping
+10:57:16.511 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16198468, does not have from, to and via, skipping
+10:57:16.511 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16235076 has no restriction tag, skipping
+10:57:16.513 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16301954 has no restriction tag, skipping
+10:57:16.513 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16302039 has no restriction tag, skipping
+10:57:16.514 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16313517 has no restriction tag, skipping
+10:57:16.515 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522423916 for restriction 16377965, skipping
+10:57:16.520 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16613067 has no restriction tag, skipping
+10:57:16.520 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16613077 has no restriction tag, skipping
+10:57:16.521 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16674790 has no restriction tag, skipping
+10:57:16.522 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16782924 has no restriction tag, skipping
+10:57:16.522 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16783026 has no restriction tag, skipping
+10:57:16.522 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16794160 has no restriction tag, skipping
+10:57:16.522 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16805926 has no restriction tag, skipping
+10:57:16.523 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16820951 has no restriction tag, skipping
+10:57:16.524 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16838246 has no restriction tag, skipping
+10:57:16.524 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16849856, does not have from, to and via, skipping
+10:57:16.524 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16849860, does not have from, to and via, skipping
+10:57:16.524 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 16849861, does not have from, to and via, skipping
+10:57:16.524 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 16850581 has no restriction tag, skipping
+10:57:16.525 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 1234834155 for restriction 16890882, skipping
+10:57:16.526 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17008486 has no restriction tag, skipping
+10:57:16.526 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 512903617 for restriction 17097242, skipping
+10:57:16.526 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 512903617 for restriction 17097243, skipping
+10:57:16.534 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17453002 has no restriction tag, skipping
+10:57:16.535 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17461826 has no restriction tag, skipping
+10:57:16.536 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17572133 has no restriction tag, skipping
+10:57:16.536 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17576454 has no restriction tag, skipping
+10:57:16.536 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17581469, does not have from, to and via, skipping
+10:57:16.536 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17603930 has no restriction tag, skipping
+10:57:16.536 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17603931 has no restriction tag, skipping
+10:57:16.539 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 522423916 for restriction 17604183, skipping
+10:57:16.539 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17618411 has no restriction tag, skipping
+10:57:16.539 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 2466497 twice, restriction 17627149 is therefore ambiguous, skipping
+10:57:16.540 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1651051 twice, restriction 17627150 is therefore ambiguous, skipping
+10:57:16.540 [ERROR] com.conveyal.r5.streets.StreetLayer - To way exits vertex 1272266 twice, restriction 17627152 is therefore ambiguous, skipping
+10:57:16.540 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17635646, does not have from, to and via, skipping
+10:57:16.541 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 17656636, skipping
+10:57:16.541 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 17656637, skipping
+10:57:16.541 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17674097, does not have from, to and via, skipping
+10:57:16.542 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17744908 has no restriction tag, skipping
+10:57:16.543 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17821664, does not have from, to and via, skipping
+10:57:16.545 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 17884679 has no restriction tag, skipping
+10:57:16.547 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17934953, does not have from, to and via, skipping
+10:57:16.548 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17934954, does not have from, to and via, skipping
+10:57:16.548 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 17938518 has multiple 'to' members, skipping.
+10:57:16.548 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17938519, does not have from, to and via, skipping
+10:57:16.548 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17938521, does not have from, to and via, skipping
+10:57:16.548 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17938526, does not have from, to and via, skipping
+10:57:16.548 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17938530, does not have from, to and via, skipping
+10:57:16.549 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17938555, does not have from, to and via, skipping
+10:57:16.549 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17938567, does not have from, to and via, skipping
+10:57:16.550 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17941196, does not have from, to and via, skipping
+10:57:16.550 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17941197, does not have from, to and via, skipping
+10:57:16.550 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17941212, does not have from, to and via, skipping
+10:57:16.552 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17942956, does not have from, to and via, skipping
+10:57:16.552 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17942958, does not have from, to and via, skipping
+10:57:16.555 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17943864, does not have from, to and via, skipping
+10:57:16.556 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 17943877 has multiple 'to' members, skipping.
+10:57:16.556 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 17943881 has multiple 'from' members, skipping.
+10:57:16.560 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17955744, does not have from, to and via, skipping
+10:57:16.560 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17956045, does not have from, to and via, skipping
+10:57:16.561 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 17956773 has multiple 'from' members, skipping.
+10:57:16.561 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 17956775 has multiple 'from' members, skipping.
+10:57:16.562 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17956855, does not have from, to and via, skipping
+10:57:16.562 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17956857, does not have from, to and via, skipping
+10:57:16.562 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 17956858 has multiple 'to' members, skipping.
+10:57:16.562 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17956862, does not have from, to and via, skipping
+10:57:16.562 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17956863, does not have from, to and via, skipping
+10:57:16.563 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17956874, does not have from, to and via, skipping
+10:57:16.566 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17993449, does not have from, to and via, skipping
+10:57:16.566 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17993451, does not have from, to and via, skipping
+10:57:16.567 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17993496, does not have from, to and via, skipping
+10:57:16.571 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 17997050, skipping
+10:57:16.571 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 17997051, skipping
+10:57:16.571 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 17997052, skipping
+10:57:16.571 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 17997053, skipping
+10:57:16.573 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 17997138, does not have from, to and via, skipping
+10:57:16.576 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18000887, does not have from, to and via, skipping
+10:57:16.577 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18002873, does not have from, to and via, skipping
+10:57:16.580 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18040728, skipping
+10:57:16.580 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18040729, does not have from, to and via, skipping
+10:57:16.580 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18040732, skipping
+10:57:16.581 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18081439, skipping
+10:57:16.582 [WARN ] com.conveyal.r5.streets.StreetLayer - Turn restriction relation 18133537 references nonexistent way 962090181, dropping this relation
+10:57:16.584 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18224287 has no restriction tag, skipping
+10:57:16.584 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18224346 has no restriction tag, skipping
+10:57:16.585 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18301113, does not have from, to and via, skipping
+10:57:16.586 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 285812545 for restriction 18301335, skipping
+10:57:16.586 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18301336, skipping
+10:57:16.586 [ERROR] com.conveyal.r5.streets.StreetLayer - Turn restriction 18312095 has multiple 'from' members, skipping.
+10:57:16.587 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18343827 has no restriction tag, skipping
+10:57:16.587 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18343828 has no restriction tag, skipping
+10:57:16.588 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18362301, does not have from, to and via, skipping
+10:57:16.588 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18377304 has no restriction tag, skipping
+10:57:16.589 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18395627 has no restriction tag, skipping
+10:57:16.589 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18443899 has no restriction tag, skipping
+10:57:16.590 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18443959 has no restriction tag, skipping
+10:57:16.593 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18571761 has no restriction tag, skipping
+10:57:16.593 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18571783 has no restriction tag, skipping
+10:57:16.593 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18573384 has no restriction tag, skipping
+10:57:16.593 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18582579, does not have from, to and via, skipping
+10:57:16.594 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18588077 has no restriction tag, skipping
+10:57:16.595 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18611842 has no restriction tag, skipping
+10:57:16.597 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18760427, no way from from to to via via, skipping
+10:57:16.598 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18775126, skipping
+10:57:16.598 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18775127, skipping
+10:57:16.598 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18775128, skipping
+10:57:16.598 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18775165 has no restriction tag, skipping
+10:57:16.598 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18775166 has no restriction tag, skipping
+10:57:16.598 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18776221 has no restriction tag, skipping
+10:57:16.600 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18787532 has no restriction tag, skipping
+10:57:16.601 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18798055 has no restriction tag, skipping
+10:57:16.601 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18801943 has no restriction tag, skipping
+10:57:16.602 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18802178 has no restriction tag, skipping
+10:57:16.603 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18811360 has no restriction tag, skipping
+10:57:16.603 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18812975 has no restriction tag, skipping
+10:57:16.603 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18813159, does not have from, to and via, skipping
+10:57:16.603 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18814271 has no restriction tag, skipping
+10:57:16.605 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18855440 has no restriction tag, skipping
+10:57:16.605 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18859102 has no restriction tag, skipping
+10:57:16.606 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18867644 has no restriction tag, skipping
+10:57:16.607 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18868110 has no restriction tag, skipping
+10:57:16.607 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18870541 has no restriction tag, skipping
+10:57:16.607 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18874702 has no restriction tag, skipping
+10:57:16.607 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18876253 has no restriction tag, skipping
+10:57:16.607 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18877651, skipping
+10:57:16.609 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18884535, skipping
+10:57:16.609 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18886599 has no restriction tag, skipping
+10:57:16.609 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18887553 has no restriction tag, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18890656 has no restriction tag, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18892167 has no restriction tag, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18893183 has no restriction tag, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18896778, does not have from, to and via, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18896780, does not have from, to and via, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 18896781, does not have from, to and via, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18897119 has no restriction tag, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18897188 has no restriction tag, skipping
+10:57:16.610 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18898225 has no restriction tag, skipping
+10:57:16.611 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 57901489 for restriction 18900919, skipping
+10:57:16.611 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18901075 has no restriction tag, skipping
+10:57:16.611 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 547139638 for restriction 18905232, skipping
+10:57:16.611 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18905872 has no restriction tag, skipping
+10:57:16.613 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18925496 has no restriction tag, skipping
+10:57:16.613 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18935890 has no restriction tag, skipping
+10:57:16.614 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18936433 has no restriction tag, skipping
+10:57:16.614 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18936565 has no restriction tag, skipping
+10:57:16.614 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18940633 has no restriction tag, skipping
+10:57:16.614 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18941895 has no restriction tag, skipping
+10:57:16.615 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18955135 has no restriction tag, skipping
+10:57:16.615 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 1360237539 for restriction 18955715, skipping
+10:57:16.616 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18963915 has no restriction tag, skipping
+10:57:16.616 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 18965693 has no restriction tag, skipping
+10:57:16.617 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 18988193, skipping
+10:57:16.618 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19000997 has no restriction tag, skipping
+10:57:16.619 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19068662 has no restriction tag, skipping
+10:57:16.620 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 1382998094 for restriction 19091060, skipping
+10:57:16.620 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find via way 1382583812 for restriction 19091489, skipping
+10:57:16.622 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19185225 has no restriction tag, skipping
+10:57:16.622 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19203355 has no restriction tag, skipping
+10:57:16.623 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19330689 has no restriction tag, skipping
+10:57:16.626 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 19457736, does not have from, to and via, skipping
+10:57:16.627 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19478252 has no restriction tag, skipping
+10:57:16.629 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 19614365, does not have from, to and via, skipping
+10:57:16.629 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 19614366, does not have from, to and via, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642658, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642659, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642660, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642661, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642662, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642663, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642664, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642665, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642666, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642667, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642668, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642669, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642670, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642671, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642672, skipping
+10:57:16.630 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19642673, skipping
+10:57:16.630 [ERROR] com.conveyal.r5.streets.StreetLayer - Invalid turn restriction 19647707, does not have from, to and via, skipping
+10:57:16.631 [WARN ] com.conveyal.r5.streets.StreetLayer - Did not find from/to edges for restriction 19663759, skipping
+10:57:16.631 [ERROR] com.conveyal.r5.streets.StreetLayer - Restriction 19683660 has no restriction tag, skipping
+10:57:16.631 [INFO ] com.conveyal.r5.streets.StreetLayer - Created 23136 turn restrictions
+10:57:29.248 [INFO ] com.conveyal.r5.streets.StreetLayer - Indexing streets...
+10:57:31.857 [INFO ] com.conveyal.r5.streets.StreetLayer - Done indexing streets.
+10:57:32.110 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table feed_info from feed_info.txt
+10:57:32.127 [INFO ] com.conveyal.gtfs.GTFSFeed - No feedId supplied and feed does not declare one. Using file name cut.
+10:57:32.129 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table agency from agency.txt
+10:57:32.129 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table calendar from calendar.txt
+10:57:32.132 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table calendar_dates from calendar_dates.txt
+10:57:32.189 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table fare_attributes was missing but it is not required.
+10:57:32.189 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table fare_rules was missing but it is not required.
+10:57:32.192 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table routes from routes.txt
+10:57:32.205 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table shapes from shapes.txt
+10:57:33.292 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table stops from stops.txt
+10:57:33.393 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table transfers was missing but it is not required.
+10:57:33.395 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table trips from trips.txt
+10:57:33.516 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table frequencies was missing but it is not required.
+10:57:33.516 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table stop_times from stop_times.txt
+10:57:35.349 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 500.0k
+10:57:37.094 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 1.0M
+10:57:39.030 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 1.5M
+10:57:40.796 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 2.0M
+10:57:44.569 [INFO ] com.conveyal.gtfs.GTFSFeed - Generating unique names for patterns
+10:57:44.758 [INFO ] com.conveyal.gtfs.GTFSFeed - Total patterns: 811
+10:57:44.766 [INFO ] com.conveyal.gtfs.GTFSFeed - Detected 0 errors in feed.
+10:57:46.098 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Creating trip patterns and schedules.
+10:57:49.958 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Done creating 36107 trips on 811 patterns.
+10:57:49.958 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - 49 zero-duration hops found.
+10:57:49.958 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Chaining trips together according to blocks to model interlining...
+10:57:50.005 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Done chaining trips together according to blocks.
+10:57:50.005 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Sorting trips on each pattern
+10:57:50.032 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - done sorting
+10:57:50.032 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Finding the approximate center of the transport network...
+10:57:50.055 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - TransportNetwork time zone set to America/New_York from agency 'SEPTA' and agency_timezone:America/New_York
+10:57:50.203 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table feed_info from feed_info.txt
+10:57:50.209 [INFO ] com.conveyal.gtfs.GTFSFeed - No feedId supplied and feed does not declare one. Using file name restore.
+10:57:50.209 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table agency from agency.txt
+10:57:50.210 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table calendar from calendar.txt
+10:57:50.211 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table calendar_dates from calendar_dates.txt
+10:57:50.230 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table fare_attributes was missing but it is not required.
+10:57:50.231 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table fare_rules was missing but it is not required.
+10:57:50.231 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table routes from routes.txt
+10:57:50.250 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table shapes from shapes.txt
+10:57:51.141 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table stops from stops.txt
+10:57:51.187 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table transfers was missing but it is not required.
+10:57:51.187 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table trips from trips.txt
+10:57:51.290 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Table frequencies was missing but it is not required.
+10:57:51.290 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Loading GTFS table stop_times from stop_times.txt
+10:57:52.887 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 500.0k
+10:57:54.657 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 1.0M
+10:57:56.448 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 1.5M
+10:57:58.162 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 2.0M
+10:58:00.077 [INFO ] com.conveyal.gtfs.model.Entity$Loader - Record number 2.5M
+10:58:04.767 [INFO ] com.conveyal.gtfs.GTFSFeed - Generating unique names for patterns
+10:58:04.944 [INFO ] com.conveyal.gtfs.GTFSFeed - Total patterns: 1010
+10:58:04.948 [INFO ] com.conveyal.gtfs.GTFSFeed - Detected 0 errors in feed.
+10:58:06.056 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Creating trip patterns and schedules.
+10:58:10.677 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Done creating 44512 trips on 1010 patterns.
+10:58:10.679 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - 42 zero-duration hops found.
+10:58:10.679 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Chaining trips together according to blocks to model interlining...
+10:58:10.705 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Done chaining trips together according to blocks.
+10:58:10.705 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Sorting trips on each pattern
+10:58:10.756 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - done sorting
+10:58:10.756 [INFO ] org.ipea.r5r.Network.TransitLayerWithShapes - Finding the approximate center of the transport network...
+10:58:12.704 [INFO ] com.conveyal.r5.streets.StreetLayer - Building edge lists from edges...
+10:58:13.137 [INFO ] com.conveyal.r5.streets.StreetLayer - Done building edge lists.
+10:58:13.141 [INFO ] com.conveyal.r5.streets.StreetLayer - Building edge lists from edges...
+10:58:13.492 [INFO ] com.conveyal.r5.streets.StreetLayer - Done building edge lists.
+10:58:13.492 [INFO ] com.conveyal.r5.streets.StreetLayer - Indexing streets...
+10:58:16.091 [INFO ] com.conveyal.r5.streets.StreetLayer - Done indexing streets.
+10:58:16.091 [INFO ] com.conveyal.r5.transit.TransitLayer - Rebuilding transient indices.
+10:58:16.142 [INFO ] com.conveyal.r5.transit.TransitLayer - Done rebuilding transient indices.
+10:58:16.151 [INFO ] com.conveyal.r5.transit.TransferFinder - Finding transfers through the street network from 27034 stops...
+10:58:18.271 [INFO ] com.conveyal.r5.transit.TransferFinder - Found transfers from 10k of 27k transit stops.
+10:58:19.765 [INFO ] com.conveyal.r5.transit.TransferFinder - Found transfers from 20k of 27k transit stops.
+10:58:21.489 [INFO ] com.conveyal.r5.transit.TransferFinder - Done finding transfers. 0 stops were not linked to the street network.
+10:58:21.493 [INFO ] com.conveyal.r5.transit.TransferFinder - Finding closest stops to P+R for 107 P+Rs
+10:58:21.553 [INFO ] com.conveyal.r5.transit.TransferFinder - Found 0 unconnected P+Rs and 99 P+Rs without closest stop in 500 m
+10:58:21.553 [INFO ] com.conveyal.r5.transit.TransitLayer - Pre-computing distances from transit stops to street vertices (WALK mode only).
+10:58:22.161 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 1k of 27k transit stops.
+10:58:22.758 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 2k of 27k transit stops.
+10:58:23.301 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 3k of 27k transit stops.
+10:58:23.931 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 4k of 27k transit stops.
+10:58:24.631 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 5k of 27k transit stops.
+10:58:25.535 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 6k of 27k transit stops.
+10:58:26.252 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 7k of 27k transit stops.
+10:58:27.002 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 8k of 27k transit stops.
+10:58:27.592 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 9k of 27k transit stops.
+10:58:28.362 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 10k of 27k transit stops.
+10:58:29.182 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 11k of 27k transit stops.
+10:58:29.909 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 12k of 27k transit stops.
+10:58:30.693 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 13k of 27k transit stops.
+10:58:31.543 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 14k of 27k transit stops.
+10:58:32.161 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 15k of 27k transit stops.
+10:58:32.883 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 16k of 27k transit stops.
+10:58:33.750 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 17k of 27k transit stops.
+10:58:34.377 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 18k of 27k transit stops.
+10:58:35.269 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 19k of 27k transit stops.
+10:58:36.174 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 20k of 27k transit stops.
+10:58:37.097 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 21k of 27k transit stops.
+10:58:38.010 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 22k of 27k transit stops.
+10:58:38.688 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 23k of 27k transit stops.
+10:58:39.448 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 24k of 27k transit stops.
+10:58:40.343 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 25k of 27k transit stops.
+10:58:41.459 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 26k of 27k transit stops.
+10:58:43.769 [INFO ] com.conveyal.r5.transit.TransitLayer - Computed distances to street vertices from 27k of 27k transit stops.
+10:58:44.074 [INFO ] com.conveyal.r5.transit.TransitLayer - Done. Computed distances to street vertices from 27k of 27k transit stops.
+10:58:44.075 [INFO ] com.conveyal.r5.transit.TransferFinder - Finding transfers through the street network from 0 stops...
+10:58:44.077 [INFO ] com.conveyal.r5.transit.TransferFinder - Done finding transfers. 0 stops were not linked to the street network.
+10:58:44.077 [INFO ] com.conveyal.r5.transit.TransferFinder - Appending inverse transfers for scenario application...
+10:58:44.113 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Writing transport network...
+10:58:50.424 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Done writing.
+10:58:50.435 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Reading transport network...
+10:58:50.444 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Loading network from file format version nv3, written by R5 commit 5962e18b8ad820f0d0de635157dbb5ecbe1b320f
+10:58:54.455 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Done reading.
+10:58:54.455 [INFO ] com.conveyal.r5.streets.StreetLayer - Building edge lists from edges...
+10:58:54.827 [INFO ] com.conveyal.r5.streets.StreetLayer - Done building edge lists.
+10:58:54.828 [INFO ] com.conveyal.r5.streets.StreetLayer - Indexing streets...
+10:58:57.786 [INFO ] com.conveyal.r5.streets.StreetLayer - Done indexing streets.
+10:58:57.788 [INFO ] com.conveyal.r5.transit.TransitLayer - Rebuilding transient indices.
+10:58:57.839 [INFO ] com.conveyal.r5.transit.TransitLayer - Done rebuilding transient indices.
+11:03:54.118 [INFO ] org.ipea.r5r.Network.NetworkChecker - Reading transport network...
+11:03:54.127 [INFO ] org.ipea.r5r.Network.NetworkChecker - Loading network from file format version nv3, written by R5 commit 5962e18b8ad820f0d0de635157dbb5ecbe1b320f
+11:03:54.127 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Reading transport network...
+11:03:54.130 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Loading network from file format version nv3, written by R5 commit 5962e18b8ad820f0d0de635157dbb5ecbe1b320f
+11:03:57.954 [INFO ] com.conveyal.r5.kryo.KryoNetworkSerializer - Done reading.
+11:03:57.956 [INFO ] com.conveyal.r5.streets.StreetLayer - Building edge lists from edges...
+11:03:58.379 [INFO ] com.conveyal.r5.streets.StreetLayer - Done building edge lists.
+11:03:58.379 [INFO ] com.conveyal.r5.streets.StreetLayer - Indexing streets...
+11:04:01.415 [INFO ] com.conveyal.r5.streets.StreetLayer - Done indexing streets.
+11:04:01.420 [INFO ] com.conveyal.r5.transit.TransitLayer - Rebuilding transient indices.
+11:04:01.444 [INFO ] com.conveyal.r5.transit.TransitLayer - Done rebuilding transient indices.
