@@ -75,13 +75,13 @@ ensure_osm_pbf(osm_pbf)
 # message("Downloading TIGER/Line tracts for 5-County SE PA…")
 
 # pa_state <- "PA"
-# pa_counties <- c("Philadelphia", "Delaware", "Montgomery", "Bucks", "Chester") 
+# pa_counties <- c("Philadelphia", "Delaware", "Montgomery", "Bucks", "Chester")
 # tracts <- tracts(state = pa_state, county = pa_counties, year = 2023, cb = TRUE, class = "sf") |>
 #   st_transform(4326)
-# 
+#
 # # Keep only GEOID + geometry for simplicity
 # tracts <- tracts %>% select(GEOID, NAME, ALAND, AWATER, geometry)
-# 
+#
 # # Create interior point centroids for reliable inside points
 # tract_centroids <- st_point_on_surface(tracts) %>%
 #   mutate(from_id = GEOID) %>%
@@ -109,7 +109,7 @@ departure_time <- ymd_hms("2025-10-16 07:30:00")
 #   sf::st_as_sf(coords = c("stop_lon","stop_lat"), crs = 4326, remove = FALSE) %>%
 #   sf::st_transform(3857)
 # service_area <- stops_before %>% st_buffer(service_buffer_m) %>% st_union() %>% st_make_valid() %>% st_transform(4326)
-# 
+#
 # tracts_served <- tracts %>% st_filter(service_area)  # only tracts intersecting service area
 
 # Update centroids/origins for routing to limit computations
@@ -141,12 +141,12 @@ build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, d
                        # Build network with these inputs explicitly
                        # When data_path contains multiple GTFS/OSM, r5r tries to pick up; use the function below to enforce
   )
-  
+
   # Force network build from specific files (ensures only desired GTFS used)
   r5r::build_network(r5r_core, elevation = FALSE, quiet = TRUE,
                      overwrite = TRUE,
                      routing_files = list(osm = osm_pbf, transit = gtfs_zip))
-  
+
   message("Routing…")
   ttm <- travel_time_matrix(
     r5r_core,
@@ -170,7 +170,7 @@ build_core_and_ttm <- function(osm_pbf, gtfs_zip, origins_df, destinations_df, d
     drop_geometry = TRUE,
     keep = c("access_time", "waiting_time", "in_vehicle_time", "transfer_time")
   )
-  
+
   stop_r5(r5r_core)
   ttm
 }
