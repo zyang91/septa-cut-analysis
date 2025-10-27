@@ -22,7 +22,7 @@ options(java.parameters = "-Xmx16G")
 # gtfs_after  <- file.path(data_dir, "cut.zip")      # post-cuts
 # outputs_dir <- file.path(data_dir, "outputs")
 # if (!dir.exists(outputs_dir)) dir.create(outputs_dir, recursive = TRUE)
-# 
+#
 # # Auto-download OSM once if missing (simple download)
 # if (!file.exists(osm_pbf)) {
 #   message("Downloading Pennsylvania OSM extract (once)…")
@@ -34,10 +34,10 @@ options(java.parameters = "-Xmx16G")
 #     quiet    = TRUE
 #   )
 # }
-# 
+#
 # # Buffer distance around stops to define service area for filtering tracts
 # service_buffer_m <- 2000
-# 
+#
 # # Auto-download OSM PBF if not present
 # ensure_osm_pbf <- function(path){
 #   if (!file.exists(path)){
