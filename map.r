@@ -48,13 +48,13 @@ offpeaks_sf <- offpeaks_sf %>%
   filter(!is.na(difference_offpeaks))
 ## plotting
 
-ggplot() + 
-  geom_sf(data = peaks_sf, aes(fill = difference_peaks),color="NA") + 
-  scale_fill_viridis_c(option = "plasma", na.value = "lightgrey") + 
-  theme_minimal() + 
-  labs(title = "Change in Travel Time during Peak Hours", 
+ggplot() +
+  geom_sf(data = peaks_sf, aes(fill = difference_peaks),color="NA") +
+  scale_fill_viridis_c(option = "plasma", na.value = "lightgrey") +
+  theme_minimal() +
+  labs(title = "Change in Travel Time during Peak Hours",
        subtitle = "After Cuts - Before Cuts (in minutes)",
-       fill = "Travel Time (minutes)") + 
+       fill = "Travel Time (minutes)") +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         panel.grid = element_blank(),
@@ -67,13 +67,13 @@ ggplot() +
 
 ggsave("figures/peak_travel_time_change.png", width = 10, height = 8, dpi = 300)
 
-ggplot() + 
-  geom_sf(data = offpeaks_sf, aes(fill = difference_offpeaks),color="NA") + 
-  scale_fill_viridis_c(option = "plasma", na.value = "lightgrey") + 
-  theme_minimal() + 
-  labs(title = "Change in Travel Time during Off-Peak Hours", 
+ggplot() +
+  geom_sf(data = offpeaks_sf, aes(fill = difference_offpeaks),color="NA") +
+  scale_fill_viridis_c(option = "plasma", na.value = "lightgrey") +
+  theme_minimal() +
+  labs(title = "Change in Travel Time during Off-Peak Hours",
        subtitle = "After Cuts - Before Cuts (in minutes)",
-       fill = "Travel Time (minutes)") + 
+       fill = "Travel Time (minutes)") +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         panel.grid = element_blank(),

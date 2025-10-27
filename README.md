@@ -4,7 +4,7 @@ Zhanchao Yang
 
 ## Overview
 
-This project analyzes the impact of SEPTA service cuts by computing transit travel times from census tract centroids to Philadelphia City Hall, comparing before and after scenarios.
+This project analyzes the impact of SEPTA service cuts by computing transit travel times from census tract centroids to Philadelphia City Hall and comparing before-and-after scenarios.
 
 ## Requirements
 
